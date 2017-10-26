@@ -4,7 +4,7 @@ const express = require('express');
 const users = require('./schema');
 const app = express();
 
-app.use('/user', graphqlHttp({schema:users, pretty: true}))
-app.listen(3000, function() {
+app.use('/user', graphqlHttp({ schema: users, pretty: true }))
+app.listen(3000, function () {
   console.log('Server on');
 });
