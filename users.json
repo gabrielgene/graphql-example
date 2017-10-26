@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "name": "Genê",
+    "age": 20,
+    "knowledge": [
+      {
+        "language": "JavaScript",
+        "frameworks": ["express.js", "lodash.js", "react.js"]
+      },
+      {
+        "language": "Java",
+        "frameworks": ["Guava"]
+      },
+      {
+        "language": "Python",
+        "frameworks": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ravi",
+    "age": 20,
+    "knowledge": [
+      {
+        "language": "JavaScript",
+        "frameworks": ["relay.js", "lodash.js", "react.js"]
+      },
+      {
+        "language": "Java",
+        "frameworks": []
+      },
+      {
+        "language": "Python",
+        "frameworks": ["Flask"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Felipinho",
+    "age": 25,
+    "knowledge": [
+      {
+        "language": "JavaScript",
+        "frameworks": ["express.js", "lodash.js", "react.js", "redux.js"]
+      },
+      {
+        "language": "Java",
+        "frameworks": ["Guava"]
+      },
+      {
+        "language": "Python",
+        "frameworks": ["Flask"]
+      }
+    ]
+  }
+]
