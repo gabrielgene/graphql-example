@@ -1,4 +1,4 @@
-const graphql = require('graphql');
+const graphql = require('graphql')
 const users = require('./users.json')
 
 let knowledgeType = new graphql.GraphQLObjectType({
@@ -7,7 +7,7 @@ let knowledgeType = new graphql.GraphQLObjectType({
     language: { type: graphql.GraphQLString },
     frameworks: { type: new graphql.GraphQLList(graphql.GraphQLString) }
   }
-});
+})
 
 let userType = new graphql.GraphQLObjectType({
   name: 'User',
@@ -19,9 +19,9 @@ let userType = new graphql.GraphQLObjectType({
     city: { type: graphql.GraphQLString },
     tag: { type: graphql.GraphQLString },
     url: { type: graphql.GraphQLString },
-    knowledge: { type: new graphql.GraphQLList(knowledgeType) },
+    knowledge: { type: new graphql.GraphQLList(knowledgeType) }
   }
-});
+})
 
 let schema = new graphql.GraphQLSchema({
   query: new graphql.GraphQLObjectType({
@@ -37,12 +37,18 @@ let schema = new graphql.GraphQLSchema({
         resolve: function (_, args) {
           let response = users.find(function (user) {
             return (user.id === args.id)
-          });
+          })
           return response
+        }
+      },
+      users: {
+        type: new graphql.GraphQLList(userType),
+        resolve: function (_, args) {
+          return users
         }
       }
     }
   })
-});
+})
 
-module.exports = schema;
+module.exports = schema
